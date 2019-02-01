@@ -1,0 +1,25 @@
+---
+type: article
+---
+{% include html/head.html %}
+{% include html/site-header.html %}
+
+{% include html/article-schema.html page=page %}
+
+<div class='post-list -single -cheatsheet'>
+  <div class='post-item'>
+    <div class='post-headline -cheatsheet'>
+      <p class='prelude'><span></span></p>
+      <h1><span>{{ page.title }}</span></h1>
+      {% include html/social-list.html page=page %}
+    </div>
+
+    <div class='post-content -cheatsheet'>
+      {{ content }}
+    </div>
+
+    {% include html/social-list.html page=page %}
+  </div>
+</div>
+
+{% include html/foot.html %}

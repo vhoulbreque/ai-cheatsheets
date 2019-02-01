@@ -1,0 +1,39 @@
+/*
+ * The top-level heading
+ */
+
+.main-heading {
+  @include heading-style;
+
+  & {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  & > h1 {
+    @include font-size(8);
+    line-height: 1.2;
+    font-weight: 200;
+    font-family: $body-font;
+    margin: 0;
+  }
+
+  & > h1 > em {
+    font-style: normal;
+    color: lighten($gray-text, 20%);
+  }
+}
+
+.main-heading.-center {
+  & > h1 {
+    text-align: center;
+  }
+}
+
+/**
+ * Add some space in preview mode
+ */
+
+.PreviewMode .main-heading {
+  margin-top: 16px;
+}
